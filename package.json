@@ -9,6 +9,7 @@
   },
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@heroicons/react": "^2.2.0",
     "next": "15.5.3",
     "react": "19.1.0",
@@ -18,6 +19,12 @@
     "react-dom": "19.1.0",
     "next": "15.5.3"
 >>>>>>> 3ae9fa4 (feat: initialize Next.js project with Tailwind CSS and custom SVG assets)
+=======
+    "@heroicons/react": "^2.2.0",
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+>>>>>>> 0a84954 (feat: Add About, Campaigns, Footer, Founder, Header, Hero, News, Newsletter, Stats, Testimonials, and Topbar components with animations and styling)
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
