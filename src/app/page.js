@@ -19,10 +19,10 @@ export default function Page() {
         <Hero />
         <About />
         <Campaigns />
+         <News />
+         <Newsletter />
+         <Testimonials />
         <Stats />
-        <News />
-        <Testimonials />
-        <Newsletter />
         <Founder />
       </main>
       <Footer />

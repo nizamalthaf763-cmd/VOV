@@ -1,4 +1,3 @@
-// components/Newsletter.tsx
 'use client'
 import { useState } from 'react'
 
@@ -9,45 +8,47 @@ export default function Newsletter() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return
-    // Here you would integrate with your email/newsletter service
+    // integrate with newsletter service here
     setSubmitted(true)
   }
 
   return (
-    <section id="newsletter" className="bg-indigo-600 py-16 text-white">
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Newsletter
-        </h2>
-        <p className="mb-8 text-indigo-100 max-w-2xl mx-auto">
-          Bring together people who care about a cause. Subscribe to stay updated with our latest programs and events.
-        </p>
+    <section className="bg-gray-50 py-12">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="bg-white rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 px-8 py-10">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">Newsletter</h2>
+            <p className="text-gray-500 mt-1">
+              Bring together people who care about a cause
+            </p>
+          </div>
 
-        {submitted ? (
-          <p className="text-lg font-medium">
-            Thank you for subscribing!
-          </p>
-        ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row justify-center items-center gap-4"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              placeholder="Your Email"
-              className="w-full sm:w-auto px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-            />
-            <button
-              type="submit"
-              className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-100 transition"
+          {submitted ? (
+            <p className="text-[#4EBC73] font-medium">
+              Thank you for subscribing!
+            </p>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="flex w-full md:w-auto items-center gap-3"
             >
-              Subscribe
-            </button>
-          </form>
-        )}
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your Email"
+                required
+                className="flex-1 md:w-64 px-4 py-2 rounded border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-400"
+              />
+              <button
+                type="submit"
+                className="bg-[#4EBC73] hover:bg-green-600 text-white font-medium px-6 py-2 rounded transition"
+              >
+                Subscribe
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   )

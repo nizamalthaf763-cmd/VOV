@@ -1,47 +1,56 @@
-// components/News.tsx
+import Image from "next/image"
+
+type NewsItem = {
+  title: string
+  date: string
+  image: string
+}
+
+const newsItems: NewsItem[] = [
+  {
+    title: "Spreading Awareness, Saving Lives",
+    date: "15 Feb, 2023",
+    image: "/images/news1.png",
+  },
+  {
+    title: "Together people who care about a cause",
+    date: "10 Feb, 2023",
+    image: "/images/news2.png",
+  },
+  {
+    title: "People who care about a cause",
+    date: "7 Feb, 2023",
+    image: "/images/news3.jpeg",
+  },
+]
+
 export default function News() {
-  const newsItems = [
-    {
-      title: 'Spreading Awareness, Saving Lives',
-      date: '15 Feb, 2023',
-      excerpt:
-        'Our latest program brings people together who care about a cause and are ready to take action.',
-    },
-    {
-      title: 'Together People Who Care About a Cause',
-      date: '10 Feb, 2023',
-      excerpt:
-        'An inspiring gathering of volunteers and donors united to support our mission and share knowledge.',
-    },
-    {
-      title: 'People Who Care About a Cause',
-      date: '7 Feb, 2023',
-      excerpt:
-        'Community members worked hand-in-hand to provide immediate relief to those in need.',
-    },
-  ]
-
   return (
-    <section id="news" className="bg-gray-50 py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-700">
-          Latest News
-        </h2>
+    <section className="bg-white py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Section Header */}
+        <p className="text-[#58A3DC] font-semibold mb-2">Latest News</p>
+        <h2 className="text-3xl text-[#1D1D1D] md:text-4xl font-bold mb-12">Latest Program</h2>
 
+        {/* News Grid */}
         <div className="grid gap-8 md:grid-cols-3">
           {newsItems.map((item) => (
             <article
               key={item.title}
-              className="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col"
+              className="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
             >
-              <p className="text-sm text-indigo-600 font-medium mb-2">
-                {item.date}
-              </p>
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-gray-600 flex-grow">{item.excerpt}</p>
-              <button className="mt-4 inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 self-start">
-                Read More
-              </button>
+              <div className="relative h-56 w-full">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-[#1D1D1D] text-lg mb-2">{item.title}</h3>
+                <p className="text-[#1D1D1D] text-sm">{item.date}</p>
+              </div>
             </article>
           ))}
         </div>

@@ -10,13 +10,16 @@ export default function About() {
           {/* Main Large Image */}
           <div className="relative">
             <img
-              src="/images/blanck.jpeg"
+              src="/images/blanck1.jpg"
               alt="Happy children"
               className="rounded-2xl shadow-lg w-80 h-auto object-cover"
             />
 
             {/* Floating Green Icon */}
-            <span className="absolute -top-8 -left-8 bg-[#4EBC73] p-6 rounded-full shadow-lg flex items-center justify-center">
+            <span
+              className="absolute bg-[#4EBC73] p-2 rounded-full shadow-lg flex items-center justify-center"
+              style={{ top: "1cm", left: "-1cm" }}
+            >
               <img
               src="/images/solidarity.png"
               alt="Charity Icon"
@@ -27,9 +30,10 @@ export default function About() {
 
           {/* Small Overlapping Image */}
           <img
-            src="/images/blanck.jpeg"
+            src="/images/blanck2.jpg"
             alt="Community support"
-            className="rounded-2xl shadow-lg w-48 h-auto object-cover absolute -bottom-10 -right-10"
+            className="rounded-2xl shadow-lg absolute"
+            style={{ width: "6cm", height: "auto", objectFit: "cover", bottom: "-2cm", right: "2cm" }}
           />
         </div>
 

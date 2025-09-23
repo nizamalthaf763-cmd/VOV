@@ -1,27 +1,92 @@
-type Campaign = { title: string; raised: string; goal: string; description: string; }
+import Image from "next/image"
+
+type Campaign = {
+  title: string
+  raised: number
+  goal: number
+  description: string
+  image: string
+  tag: string
+}
 
 const campaigns: Campaign[] = [
-  { title:'Supporting children’s education', raised:'₹5,200', goal:'₹10,400', description:'Despite difficult circumstances.' },
-  { title:'Monthly meals for the homeless', raised:'₹1,124', goal:'₹10,400', description:'In loving memory.' },
-  { title:'Freedom of Movement', raised:'₹120,000', goal:'₹600,000', description:'Neo Motion Mobility Scooters.' },
+  {
+    title: "Supporting Children's Education",
+    raised: 5200,
+    goal: 10400,
+    description: "Despite difficult circumstances.",
+    image: "/images/education.jpg",
+    tag: "Karunyahastham",
+  },
+  {
+    title: "Monthly Meals For The Homeless",
+    raised: 1124,
+    goal: 10400,
+    description: "In loving memory.",
+    image: "/images/meals.avif",
+    tag: "Niranjana",
+  },
+  {
+    title: "Freedom Of Movement For The Differently Abled",
+    raised: 120000,
+    goal: 600000,
+    description: "Neo Motion Mobility Scooters.",
+    image: "/images/mobility.jpg",
+    tag: "Mission NMMS",
+  },
 ]
 
 export default function Campaigns() {
   return (
-    <section id="campaigns" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <h3 className="text-3xl font-bold text-center mb-10">Our Campaigns</h3>
+    <section className="bg-white py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        <p className="text-[#58A3DC] font-semibold mb-2">Our Campaign</p>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-[#1D1D1D]">Giving Help To Those Who Need It</h2>
+
         <div className="grid gap-8 md:grid-cols-3">
-          {campaigns.map(c=>(
-            <div key={c.title} className="border rounded-xl p-6 shadow hover:shadow-lg transition">
-              <h4 className="font-semibold text-xl mb-2">{c.title}</h4>
-              <p className="text-gray-600 mb-4">{c.description}</p>
-              <p className="text-sm text-gray-500 mb-2">Raised {c.raised} / Goal {c.goal}</p>
-              <button className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
-                Donate Now
-              </button>
-            </div>
-          ))}
+          {campaigns.map(c => {
+            const progress = Math.min((c.raised / c.goal) * 100, 100)
+            return (
+              <div
+                key={c.title}
+                className="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={c.image}
+                    alt={c.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <span className="absolute top-3 left-3 bg-[#4EBC73] text-white font-semibold text-sm px-3 py-1 rounded-full">
+                    {c.tag}
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-lg mb-2 text-[#1D1D1D]">{c.title}</h3>
+                  <p className="text-[#1D1D1D] mb-4">{c.description}</p>
+                  <div className="flex justify-between text-sm text-gray-700 mb-2">
+                    <span>₹{c.raised.toLocaleString()}</span>
+                    <span className="text-[#8A8A8A]">₹{c.goal.toLocaleString()}</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
+                    <div
+                      className="bg-[#4EBC73] h-2 rounded-full"
+                      style={{ width: `${progress}%` }}
+                    />
+                  </div>
+                  <div className="flex gap-3">
+                    <button className="flex-1 bg-[#4EBC73] text-white rounded-lg py-2 font-medium hover:bg-green-600">
+                      Donate now
+                    </button>
+                    <button className="flex-1 border border-gray-300 text-gray-700 rounded-lg py-2 font-medium hover:bg-[#58A3DC] hover:text-white">
+                      See detail
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
