@@ -1,9 +1,7 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',                // 👈 key for static export
-  basePath: '/VOV',                // 👈 repo name
-  assetPrefix: '/VOV/',            // 👈 required for assets
+  // Add any Next.js options you really need here.
+  // For a default Vercel deployment, you can even leave this empty.
 };
 
-module.exports = nextConfig;
+export default nextConfig;
