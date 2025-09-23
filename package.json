@@ -8,10 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@heroicons/react": "^2.2.0",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0"
+=======
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.5.3"
+>>>>>>> 3ae9fa4 (feat: initialize Next.js project with Tailwind CSS and custom SVG assets)
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
