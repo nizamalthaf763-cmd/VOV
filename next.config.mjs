@@ -1,4 +1,9 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  output: 'export',                // 👈 key for static export
+  basePath: '/VOV',                // 👈 repo name
+  assetPrefix: '/VOV/',            // 👈 required for assets
+};
 
-export default nextConfig;
+module.exports = nextConfig;
