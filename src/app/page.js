@@ -8,6 +8,7 @@ import News from './components/News'
 import Testimonials from './components/Testimonials'
 import Newsletter from './components/Newsletter'
 import Founder from './components/Founder'
+import OurTeam from './components/OurTeam'
 import Footer from './components/Footer'
 
 export default function Page() {
@@ -24,6 +25,7 @@ export default function Page() {
          <Testimonials />
         <Stats />
         <Founder />
+        {/* <OurTeam/> */}
       </main>
       <Footer />
     </>

@@ -1,4 +1,3 @@
-// components/TopBar.tsx
 import { FaTwitter, FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa'
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
