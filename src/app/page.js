@@ -25,7 +25,7 @@ export default function Page() {
          <Testimonials />
         <Stats />
         <Founder />
-        {/* <OurTeam/> */}
+        <OurTeam/>
       </main>
       <Footer />
     </>
