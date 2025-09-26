@@ -32,7 +32,9 @@ export default function Footer() {
             <a href="#" aria-label="Instagram"><FaInstagram /></a>
             <a href="#" aria-label="Facebook"><FaFacebook /></a>
             <a href="#" aria-label="YouTube"><FaYoutube /></a>
-            <a href="#" aria-label="Support"><FcSupport /></a>
+            <Link href="/LoginPage" aria-label="Support">
+              <FcSupport />
+            </Link>
           </div>
         </div>
 
