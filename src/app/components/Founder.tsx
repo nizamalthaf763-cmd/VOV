@@ -7,7 +7,7 @@ export default function Founder() {
           {/* Left: Founder Image with green accent */}
           <div className="relative">
             {/* green rounded accent behind */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-green-500 rounded-tr-3xl rounded-bl-3xl z-0"></div>
+            <div className="absolute -top-4 -left-4 w-80 h-100 bg-[#4EBC73] rounded-tr-3xl rounded-bl-3xl z-0"></div>
 
             <div className="relative rounded-2xl overflow-hidden shadow-lg z-10">
               <img
@@ -20,8 +20,8 @@ export default function Founder() {
 
           {/* Right: Founder Content */}
           <div>
-            <h3 className="text-lg font-bold uppercase text-gray-800 mb-2">FOUNDER</h3>
-            <h4 className="text-xl md:text-2xl font-semibold text-blue-600 mb-4">
+            <h1 className="text-xl font-semibold uppercase text-gray-800 mb-2">FOUNDER</h1>
+            <h4 className="text-lg md:text-2xl font-bold text-[#58A3DC] mb-4">
               Azhar Pachalloor
             </h4>
 

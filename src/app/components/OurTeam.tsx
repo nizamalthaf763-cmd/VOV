@@ -47,14 +47,14 @@ export default function OurTeam() {
         {/* Left: Profile Card */}
         <div className="relative">
           {/* Vertical ribbon */}
-          <div className="absolute -left-12 top-8 rotate-[-90deg] origin-left">
-            <div className="bg-green-500 text-white font-bold px-4 py-2 rounded-tr-xl rounded-tl-xl tracking-widest">
+          <div className="absolute -left-12 top-25 rotate-[-90deg] origin-left">
+            <div className="bg-[#4EBC73] text-white font-bold px-4 py-2 rounded-tr-xl rounded-tl-xl tracking-widest">
               OUR TEAM
             </div>
           </div>
 
           {/* Green rounded accent top-left */}
-          <div className="absolute -top-4 -left-4 w-16 h-16 bg-green-500 rounded-br-3xl z-0"></div>
+          <div className="absolute -top-3 -left-3 w-50 h-50 bg-[#4EBC73] rounded-br-3xl z-0"></div>
 
           {/* Profile card with animation */}
           <div className="relative bg-gray-100 rounded-2xl overflow-hidden shadow-lg z-10 w-80 h-96 flex items-center justify-center">
@@ -75,13 +75,13 @@ export default function OurTeam() {
             <div className="absolute left-4 bottom-4 flex flex-col gap-2">
               <button
                 onClick={prev}
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-green-500 text-white shadow hover:bg-green-600"
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-[#4EBC73] text-white shadow hover:bg-green-600"
               >
                 ‹
               </button>
               <button
                 onClick={next}
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-green-500 text-white shadow hover:bg-green-600"
+                className="w-8 h-8 flex items-center justify-center rounded-full bg-[#4EBC73] text-white shadow hover:bg-green-600"
               >
                 ›
               </button>
@@ -99,7 +99,7 @@ export default function OurTeam() {
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-lg font-semibold text-blue-600 mb-3">
+              <h3 className="text-lg font-semibold text-[#58A3DC] mb-3">
                 {team[index].name}
               </h3>
               <p className="text-gray-700 leading-relaxed mb-6">
@@ -115,7 +115,7 @@ export default function OurTeam() {
                 key={i}
                 onClick={() => setIndex(i)}
                 className={`w-20 h-20 rounded-md shadow overflow-hidden border-2 ${
-                  i === index ? "border-green-500" : "border-transparent"
+                  i === index ? "border-[#4EBC73]" : "border-transparent"
                 }`}
               >
                 <img

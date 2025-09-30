@@ -1,75 +1,45 @@
 "use client";
 
+import { Bell, Search } from "lucide-react";
 import Image from "next/image";
 
 export default function Topbar() {
   return (
-    <header className="w-full h-16 bg-white flex items-center px-6 shadow-sm">
-      {/* Left side: logo/play icon */}
-      <div className="flex items-center gap-2">
-        {/* Logo image */}
-        <Image
-          src="/images/vov-logo.png"
-          alt="VOV Logo"
-          width={32}
-          height={32}
-          className="object-contain"
-        />
-        <h1 className="text-xl font-semibold text-gray-900">
-          Hello, <span className="font-bold">Bondi</span>
-        </h1>
-        <p className="text-sm font-semibold text-gray-900">
-          Welcome Back</p>
+    <header className="w-full h-16 bg-gray-50 flex items-center px-6 shadow-sm">
+      {/* Left side: Logo + Title */}
+      <div className="flex items-center gap-3">
+        {/* Circle logo */}
+        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black">
+          <Image
+            src="/images/vov-logo.png"
+            alt="Fenco Logo"
+            width={20}
+            height={20}
+            className="object-contain"
+          />
+        </div>
+        <div className="flex flex-col leading-tight">
+          <span className="text-xs text-gray-500">Welcome Back</span>
+          <span className="text-base font-semibold text-gray-900">Bondi</span>
+        </div>
       </div>
 
-      {/* Right side: search + mail + avatar */}
+      {/* Right side: icons + avatar */}
       <div className="ml-auto flex items-center gap-4">
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search"
-            className="pl-8 pr-3 py-1.5 rounded-md border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <svg
-            className="absolute left-2 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
-
-        {/* Mail icon */}
-        <button className="p-2 rounded-full hover:bg-gray-100">
-          <svg
-            className="w-5 h-5 text-gray-600"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 4h16v16H4z M22 6l-10 7L2 6"
-            />
-          </svg>
+        {/* Notification button */}
+        <button className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
+          <Bell size={18} className="text-gray-700" />
         </button>
 
-        {/* Avatar (replace src with your own) */}
-        <Image
-          src="/images/avatar.jpeg"
-          alt="User Avatar"
-          width={32}
-          height={32}
-          className="rounded-full object-cover"
-        />
+        {/* Search button */}
+        <button className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
+          <Search size={18} className="text-gray-700" />
+        </button>
+
+        {/* Avatar */}
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-black text-white font-semibold">
+          B
+        </div>
       </div>
     </header>
   );

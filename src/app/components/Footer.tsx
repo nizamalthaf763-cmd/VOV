@@ -27,7 +27,7 @@ export default function Footer() {
             Whatever it is that you care about, there will be a charity working on it. Charities help in lots of different ways.
           </p>
           {/* Social Icons */}
-          <div className="flex space-x-4 text-green-600 text-lg">
+          <div className="flex space-x-4 text-[#4EBC73] text-lg">
             <a href="#" aria-label="Twitter"><FaTwitter /></a>
             <a href="#" aria-label="Instagram"><FaInstagram /></a>
             <a href="#" aria-label="Facebook"><FaFacebook /></a>
@@ -44,7 +44,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {["Donations", "Features", "Categories", "Volunteer", "About us"].map((item) => (
               <li key={item}>
-                <Link href="#" className="hover:text-green-600 transition-colors">{item}</Link>
+                <Link href="#" className="hover:text-[#4EBC73] transition-colors">{item}</Link>
               </li>
             ))}
           </ul>
@@ -56,7 +56,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {["How it work?", "Contact us", "FAQ", "Help"].map((item) => (
               <li key={item}>
-                <Link href="#" className="hover:text-green-600 transition-colors">{item}</Link>
+                <Link href="#" className="hover:text-[#4EBC73] transition-colors">{item}</Link>
               </li>
             ))}
           </ul>
@@ -67,15 +67,15 @@ export default function Footer() {
           <h4 className="text-base font-semibold mb-4">Contact Info</h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center space-x-3">
-              <FaPhoneAlt className="text-green-600" />
+              <FaPhoneAlt className="text-[#4EBC73]" />
               <span>+1-206-156 2849</span>
             </li>
             <li className="flex items-center space-x-3">
-              <FaEnvelope className="text-green-600" />
+              <FaEnvelope className="text-[#4EBC73]" />
               <span>Info.voiceofthevoiceless1@gmail.com</span>
             </li>
             <li className="flex items-center space-x-3">
-              <FaMapMarkerAlt className="text-green-600" />
+              <FaMapMarkerAlt className="text-[#4EBC73]" />
               <span>Your Address here</span>
             </li>
           </ul>
