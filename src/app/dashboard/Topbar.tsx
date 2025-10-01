@@ -27,14 +27,14 @@ export default function Topbar() {
       {/* Right side: icons + avatar */}
       <div className="ml-auto flex items-center gap-4">
         {/* Notification button */}
-        <button className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
+        {/* <button className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
           <Bell size={18} className="text-gray-700" />
-        </button>
+        </button> */}
 
         {/* Search button */}
-        <button className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
+        {/* <button className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
           <Search size={18} className="text-gray-700" />
-        </button>
+        </button> */}
 
         {/* Avatar */}
         <div className="w-9 h-9 flex items-center justify-center rounded-full bg-black text-white font-semibold">

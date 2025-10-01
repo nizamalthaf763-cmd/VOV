@@ -3,7 +3,17 @@
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 import { Card, CardContent } from "./Card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import { FaCcVisa, FaCcMastercard } from "react-icons/fa";
+import { MdOutlineSimCard } from "react-icons/md";
 
 // Sample data
 const chartData = [
@@ -42,7 +52,9 @@ export default function Dashboard() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
             {/* Analytics */}
             <div className="col-span-2 p-4 bg-white rounded-xl shadow-sm">
-              <h2 className="text-lg text-[#1E1E2F] font-semibold mb-4">Analytics</h2>
+              <h2 className="text-lg text-[#1E1E2F] font-semibold mb-4">
+                Analytics
+              </h2>
               <div className="h-64">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={chartData}>
@@ -50,7 +62,12 @@ export default function Dashboard() {
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
-                    <Line type="monotone" dataKey="value" stroke="#2297F2" strokeWidth={3} />
+                    <Line
+                      type="monotone"
+                      dataKey="value"
+                      stroke="#2297F2"
+                      strokeWidth={3}
+                    />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
@@ -58,35 +75,125 @@ export default function Dashboard() {
 
             {/* Cards */}
             <div className="p-4 bg-white rounded-xl shadow-sm">
-              <h2 className="text-lg text-[#1E1E2F] font-semibold mb-4">Cards</h2>
-              <CreditCard name="Jock Lewis" number="1234 5678 9101 1121" type="mastercard" />
-              <CreditCard name="Jock Lewis" number="1234 5678 9101 1121" type="visa" />
+              <h2 className="text-lg text-[#1E1E2F] font-semibold mb-4">
+                Cards
+              </h2>
+              <CreditCard
+                name="Jock Lewis"
+                number="1234567812345678"
+                type="Visa"
+              />
+              <CreditCard
+                name="Jock Lewis"
+                number="4321432143214321"
+                type="Mastercard"
+              />
             </div>
           </div>
 
           {/* Transactions */}
           <div className="p-4 bg-white rounded-xl shadow-sm">
-            <h2 className="text-lg text-[#1E1E2F] font-semibold mb-4">Transaction</h2>
+            <h2 className="text-lg text-[#1E1E2F] font-semibold mb-4">
+              Transaction
+            </h2>
             <div className="max-h-64 overflow-y-auto">
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              <TransactionRow name="Adobe After Effect" date="Sat, 20 Apr 2020" amount="$80.09" status="Income" />
-              <TransactionRow name="McDonald's" date="Fri, 19 Apr 2020" amount="$7.03" status="Outcome" />
-              {/* Add more TransactionRow as needed */}
+              <TransactionRow
+                name="Adobe After Effect"
+                date="Sat, 20 Apr 2020"
+                amount="$80.09"
+                status="Income"
+              />
+              <TransactionRow
+                name="McDonald's"
+                date="Fri, 19 Apr 2020"
+                amount="$7.03"
+                status="Outcome"
+              />
+                <TransactionRow
+                name="Adobe After Effect"
+                date="Sat, 20 Apr 2020"
+                amount="$80.09"
+                status="Income"
+              />
+              <TransactionRow
+                name="McDonald's"
+                date="Fri, 19 Apr 2020"
+                amount="$7.03"
+                status="Outcome"
+              />
+                <TransactionRow
+                name="Adobe After Effect"
+                date="Sat, 20 Apr 2020"
+                amount="$80.09"
+                status="Income"
+              />
+              <TransactionRow
+                name="McDonald's"
+                date="Fri, 19 Apr 2020"
+                amount="$7.03"
+                status="Outcome"
+              />
+                <TransactionRow
+                name="Adobe After Effect"
+                date="Sat, 20 Apr 2020"
+                amount="$80.09"
+                status="Income"
+              />
+              <TransactionRow
+                name="McDonald's"
+                date="Fri, 19 Apr 2020"
+                amount="$7.03"
+                status="Outcome"
+              />
+                <TransactionRow
+                name="Adobe After Effect"
+                date="Sat, 20 Apr 2020"
+                amount="$80.09"
+                status="Income"
+              />
+              <TransactionRow
+                name="McDonald's"
+                date="Fri, 19 Apr 2020"
+                amount="$7.03"
+                status="Outcome"
+              />
+                <TransactionRow
+                name="Adobe After Effect"
+                date="Sat, 20 Apr 2020"
+                amount="$80.09"
+                status="Income"
+              />
+              <TransactionRow
+                name="McDonald's"
+                date="Fri, 19 Apr 2020"
+                amount="$7.03"
+                status="Outcome"
+              />
+                <TransactionRow
+                name="Adobe After Effect"
+                date="Sat, 20 Apr 2020"
+                amount="$80.09"
+                status="Income"
+              />
+              <TransactionRow
+                name="McDonald's"
+                date="Fri, 19 Apr 2020"
+                amount="$7.03"
+                status="Outcome"
+              />
+                <TransactionRow
+                name="Adobe After Effect"
+                date="Sat, 20 Apr 2020"
+                amount="$80.09"
+                status="Income"
+              />
+              <TransactionRow
+                name="McDonald's"
+                date="Fri, 19 Apr 2020"
+                amount="$7.03"
+                status="Outcome"
+              />
+              {/* add more rows */}
             </div>
           </div>
         </main>
@@ -113,11 +220,42 @@ function StatCard({ title, amount, icon }) {
 }
 
 function CreditCard({ name, number, type }) {
+  const formattedNumber = number.replace(/(.{4})/g, "$1 ");
+
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-xl mb-4">
-      <p className="text-sm">{type.toUpperCase()}</p>
-      <p className="text-lg font-semibold">{number}</p>
-      <p className="text-sm mt-2">{name}</p>
+    <div className="relative w-[320px] h-[190px] bg-gradient-to-r from-blue-700 to-purple-900 text-white rounded-2xl shadow-xl p-5 mb-4 flex flex-col justify-between">
+      {/* Top Row */}
+      <div className="flex justify-between items-center">
+        {/* Chip */}
+        <div className="w-12 h-9 bg-yellow-300 rounded-md flex items-center justify-center shadow-inner">
+          <MdOutlineSimCard className="text-yellow-900" size={22} />
+        </div>
+        {/* Card Logo */}
+        <div className="text-3xl">
+          {type.toLowerCase() === "visa" ? (
+            <FaCcVisa />
+          ) : (
+            <FaCcMastercard />
+          )}
+        </div>
+      </div>
+
+      {/* Card Number */}
+      <div className="tracking-widest text-lg font-mono mt-2">
+        {formattedNumber}
+      </div>
+
+      {/* Cardholder Info */}
+      <div className="flex justify-between items-center mt-2 text-sm">
+        <div>
+          <p className="uppercase text-gray-300">Card Holder</p>
+          <p className="text-base font-semibold">{name}</p>
+        </div>
+        <div>
+          <p className="uppercase text-gray-300">Type</p>
+          <p className="text-base font-semibold">{type}</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -133,7 +271,9 @@ function TransactionRow({ name, date, amount, status }) {
         <span className="font-bold text-[#1E1E2F]">{amount}</span>
         <span
           className={`px-3 py-1 rounded-full text-xs ${
-            status === "Income" ? "bg-green-100 text-green-600" : "bg-red-100 text-red-600"
+            status === "Income"
+              ? "bg-green-100 text-green-600"
+              : "bg-red-100 text-red-600"
           }`}
         >
           {status}
